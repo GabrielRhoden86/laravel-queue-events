@@ -26,7 +26,7 @@ class SendListnerMailHome
         $user = $event->user;
 
         try {
-            Mail::send('emailQueueEvent', ['dados' => $user], function ($message) use ($user) {
+            Mail::send('confirmationEmail', ['dados' => $user], function ($message) use ($user) {
                 $usuario_cadastrado = ucfirst($user->name);
                 $message->from('gabrielrhodden@gmail.com');
                 $message->to($user->email, $user->name)->subject("Senhor(a) {$usuario_cadastrado} segue email da Home!");

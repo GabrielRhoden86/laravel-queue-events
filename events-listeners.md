@@ -8,3 +8,14 @@
 ## 8 - Execute: http://127.0.0.1:8000/enviar-email
 ## 9 - Reinicie os workers: php artisan queue:restart
 ## 10 - Limpa Failed Jobs: php artisan queue:flush
+
+
+Pattern Observer:
+Começos pelo controller que processa as regras de negocio direciona ao  evento que distribui aos listners que executam a tarefa
+##        controller
+    	      |
+    		  |
+  	________Event_______
+	|	     |	        |
+	|	     |          |	
+Listner 1 Listner 2  Listner 3
