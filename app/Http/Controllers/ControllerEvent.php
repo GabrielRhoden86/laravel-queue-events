@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Events\SendEventMail;
 use Illuminate\Http\Request;
 use App\Models\User;
+use Illuminate\Support\Facades\Queue;
 
 class ControllerEvent extends Controller
 {
@@ -14,7 +15,6 @@ class ControllerEvent extends Controller
                 event(new SendEventMail($user));
             }
         });
-
         //$allUsers = $user::pluck("name")->toArray();
         return response()->json(['status' => 'Event triggered!']);
     }

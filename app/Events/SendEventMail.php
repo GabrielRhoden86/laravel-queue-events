@@ -13,12 +13,15 @@ class SendEventMail
 {
     use Dispatchable, InteractsWithSockets, SerializesModels;
     public $user;
+    public $email;
     /**
      * Create a new event instance.
      */
     public function __construct(User $user)
     {
         $this->user = $user;
+        $this->email = $user;
+
     }
 
     /**

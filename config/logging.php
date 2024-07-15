@@ -57,6 +57,11 @@ return [
             'channels' => ['single'],
             'ignore_exceptions' => false,
         ],
+        'mail' => [
+            'driver' => 'single',
+            'path' => storage_path('logs/mail.log'),
+            'level' => 'error',
+        ],
 
         'single' => [
             'driver' => 'single',
