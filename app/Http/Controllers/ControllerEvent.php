@@ -18,5 +18,4 @@ class ControllerEvent extends Controller
         //$allUsers = $user::pluck("name")->toArray();
         return response()->json(['status' => 'Event triggered!']);
     }
-
 }

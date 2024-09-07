@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 class SendListnerMail implements ShouldQueue
 {
 
-    public $queue = 'emailsEvents';
+    public $queue = 'emailsDefault';
     // Cada tentativa terá um tempo limite de 120 segundos, com um atraso de 10 segundos entre as tentativas.
     public $tries = 3;  // Número de tentativas
     public $timeout = 120;  // Tempo limite em segundos

@@ -21,7 +21,6 @@ class SendEventMail
     {
         $this->user = $user;
         $this->email = $user;
-
     }
 
     /**

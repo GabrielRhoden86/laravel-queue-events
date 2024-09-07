@@ -9,7 +9,7 @@ use Illuminate\Support\Facades\Mail;
 
 class SendListnerMailWork implements ShouldQueue
 {
-    public $queue = 'emailsEvents';
+    public $queue = 'emailsWork';
     // public $queue = 'emailsEventsWork';  enviar somente para uma fila
 
     // Cada tentativa terá um tempo limite de 120 segundos, com um atraso de 10 segundos entre as tentativas.
